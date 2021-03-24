@@ -1,0 +1,87 @@
+.time {
+    width: 100%;
+    height: 488px;
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    /* position: absolute; */
+    /* left: 165px;
+    top: 414px; */
+}
+
+.time__container {
+    display: flex;
+    flex-direction: column;
+}
+
+.greetings {
+    font-size: 20px;
+    font-weight: bold;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 4px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    width: 500px;
+    height: 28px;
+   
+}
+
+.current__time {
+    width: 400px;
+    height: 200px;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 80px;
+    line-height: 200px;
+    color: white;
+}
+
+.current__time h3 {
+    font-weight: 300;
+    font-size: 40px;
+    margin-top: 200px;
+    margin-left: 50px;
+}
+
+.current__time__zone {
+    font-weight: bold;
+    font-size: 24px;
+    line-height: 28px;
+    display: flex;
+    align-items: flex-end;
+    letter-spacing: 4.8px;
+    text-transform: uppercase;
+    color: #FFFFFF;
+    height: 28px;
+}
+
+
+.extend__container {
+    width: 146px;
+    height: 56px;
+    background-color: white;
+    border-radius: 28px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+}
+
+.extend__container span {
+    display: flex;
+    align-items: center;
+    justify-content: space-around;
+    letter-spacing: 5px;
+    text-transform: uppercase;
+    color: #000000;
+    mix-blend-mode: normal;
+    opacity: 0.5;
+}
+
+.MuiSvgIcon-root {
+    margin-left: 10px;
+   
+}
