@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from 'react';
+import { css, jsx } from '@emotion/react';
 import './Extend.css';
 
 function Extend() {
@@ -8,6 +9,7 @@ function Extend() {
     const [dayofweek, setDayofweek] = useState();
     const [weeknumber, setWeeknumber] = useState();
 
+    // const colorExpand = ' rgba(0, 0, 0, 0.75);'
 
     useEffect(()=> {
         
@@ -26,7 +28,7 @@ function Extend() {
     },[]);
 
     return (
-        <div className='extended__container'>
+        <div className= 'extended__container'  >
             <div className='extended__info'>
                 <div className='right__side'>
                     <div className='time__zone'>

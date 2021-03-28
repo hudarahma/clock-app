@@ -1,6 +1,11 @@
 import React, { useState, useEffect } from 'react';
-import ArrowDropDownCircleIcon from '@material-ui/icons/ArrowDropDownCircle';
-import morning from './morning.png';
+import morning from './assets/morning.png';
+import evenigbg from './assets/evening-bg.jpg';
+import night from './assets/icon-moon.svg';
+import morningbg from './assets/morning-bg.jpg';
+import nightbg from './assets/night-bg.jpg';
+import ArrowUp from './assets/icon-arrow-up.svg';
+import ArrowDown from './assets/icon-arrow-down.svg';
 import './Time.css';
 
 
@@ -10,7 +15,12 @@ function Time(props) {
     const [time, setTime] = useState('00:00');
     const [zone, setZone] = useState();
     const [greetings, setGreetings] = useState();
-    const [offset, setOffset] = useState()
+    const [offset, setOffset] = useState();
+    const [day, setDay] = useState(morning);
+    const [bg, setBg] = useState(morningbg); 
+    
+    
+    document.documentElement.style = `background: url(${bg}) center/cover no-repeat`;
    
    
     useEffect(()=> {
@@ -28,18 +38,30 @@ function Time(props) {
         
     },[]);
     
-    console.log(time);
+  
 
     useEffect(()=> {
         let value = parseInt(time.slice(0,2));
-        if (value === 24 || (value >=0 && value > 12)){
+        if (value === 24 || (value > 0 && value < 12)){
             setGreetings('Good Morning');
-        } else if (value >= 12 && value < 16) {
+            setDay(morning);
+            setBg(morningbg)
+            
+        } else if (value >= 12 && value <= 16) {
             setGreetings('Good Afternoon');
-        } else if (value >=16 && value < 21 ){
+            setDay(morning);
+            setBg(morningbg);
+            
+        } else if (value >16 && value < 21 ){
             setGreetings('Good Evening');
+            setDay(night);
+            setBg(evenigbg);
+           
         } else {
             setGreetings('Good Night');
+            setDay(night);
+            setBg(nightbg);
+            
         }
     },[])
    
@@ -48,7 +70,7 @@ function Time(props) {
         <div className='time'>
             <div className='time__contianer'>
                 <div className='greetings'>
-                    <img src={morning} alt='morning-logo'/>
+                    <img src={day} alt='day-logo'/>
                     <span>{greetings} , IT’S CURRENTLY</span>
                 </div>
 
@@ -59,9 +81,9 @@ function Time(props) {
 
                 <div className='current__time__zone'>IN {zone}</div>
             </div>
-            <div className='extend__container' onClick={()=> props.setExpanded(true)}>
-                <span>more</span>
-                <ArrowDropDownCircleIcon />
+            <div className='extend__container' onClick={()=> props.setExpanded(expanded => !expanded)}>
+                <span>{props.expanded ? 'Less' : 'More' }</span>
+                <img src={ props.expanded ? ArrowUp : ArrowDown}  alt='arrows'/>
             </div>
 
         </div>

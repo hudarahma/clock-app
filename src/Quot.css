@@ -1,4 +1,8 @@
-.qout {
+ .quot-container {
+    display: flex;
+ }
+
+.quot {
     font-size: 18px;
     line-height: 28px;
     width: 600px;
@@ -8,4 +12,8 @@
     align-items: baseline;
     justify-content: space-between;
     color: white;
+}
+
+.icon {
+    cursor: pointer;
 }
