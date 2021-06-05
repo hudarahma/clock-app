@@ -1,10 +1,35 @@
-# Getting Started with Create React App
+# About The Project
+<p align="center">
+    <img src='/public/clock-app.jpg' alt='clock-app' 
+    width="180" height="180"/>
+</p>
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+The project will show you, your current location clock .
 
-## Available Scripts
 
-In the project directory, you can run:
+# Getting Started
+
+ A few simple steps, you can set up the project:
+## Installation
+
+1. Get your API's ready:
+
+    - [World Time API](http://worldtimeapi.org/) to set the time based on the visitor's IP adress.<br />
+    
+    - [Programming Quotes API](https://programming-quotes-api.herokuapp.com/) to generate random programming quotes.<br />
+
+2. Clone the repo in your terminal:<br />
+
+    `git clone https://github.com/hudarahma/clock-app.git`
+
+3. Install NPM packages<br />
+
+    `npm install`
+
+4. Start the project with:<br />
+
+    `npm start`
+
 
 ### `npm start`
 
